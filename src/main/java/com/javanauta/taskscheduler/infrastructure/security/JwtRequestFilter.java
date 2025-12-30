@@ -42,7 +42,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             // If the username is not null and the user is not yet authenticated
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 // Loads user details from the username
-                UserDetails userDetails = userDetailsService.loadUserDetails(username, token);
+                UserDetails userDetails = userDetailsService.loadUserDetails(username, authorizationHeader);
                 // Validates the JWT token
                 if (jwtUtil.validateToken(token, username)) {
                     // Creates an authentication object with user information
