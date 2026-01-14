@@ -1,9 +1,7 @@
 package com.javanauta.taskscheduler.business;
 
 import com.javanauta.taskscheduler.business.dto.TaskDTO;
-import com.javanauta.taskscheduler.business.dto.UserDTO;
 import com.javanauta.taskscheduler.business.mapper.TaskConverter;
-import com.javanauta.taskscheduler.infrastructure.client.UserClient;
 import com.javanauta.taskscheduler.infrastructure.entity.Task;
 import com.javanauta.taskscheduler.infrastructure.enums.NotificationStatusEnum;
 import com.javanauta.taskscheduler.infrastructure.repository.TaskRepository;
@@ -11,7 +9,6 @@ import com.javanauta.taskscheduler.infrastructure.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -36,5 +33,9 @@ public class TaskService {
 
     public List<TaskDTO> findTaskByTimePeriod(LocalDateTime initialDateTime, LocalDateTime finalDateTime) {
         return taskConverter.toTaskDTOList(taskRepository.findByDueDateTimeBetween(initialDateTime, finalDateTime));
+    }
+
+    public List<TaskDTO> findTaskByUserEmail(String token) {
+        return taskConverter.toTaskDTOList(taskRepository.findByUserEmail(jwtUtil.extractUsername(token.substring(7))));
     }
 }

@@ -28,4 +28,9 @@ public class TaskController {
     public ResponseEntity<List<TaskDTO>> findTaskListByPeriod(@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime initialDateTime, @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime finalDateTime) {
         return ResponseEntity.ok(taskService.findTaskByTimePeriod(initialDateTime, finalDateTime));
     }
+
+    @GetMapping
+    public ResponseEntity<List<TaskDTO>> findTaskListByUserEmail(@RequestHeader("Authorization") String token) {
+        return ResponseEntity.ok(taskService.findTaskByUserEmail(token));
+    }
 }

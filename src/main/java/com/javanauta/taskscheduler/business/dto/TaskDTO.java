@@ -16,10 +16,12 @@ public class TaskDTO {
     private String id;
     private String name;
     private String description;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime creationDateTime;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime dueDateTime;
     private String userEmail;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime modificationDateTime;
     private NotificationStatusEnum notificationStatusEnum;
 }
