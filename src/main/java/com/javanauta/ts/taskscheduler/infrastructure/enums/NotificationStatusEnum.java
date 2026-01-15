@@ -1,4 +1,4 @@
-package com.javanauta.taskscheduler.infrastructure.enums;
+package com.javanauta.ts.taskscheduler.infrastructure.enums;
 
 public enum NotificationStatusEnum {
     PENDING,

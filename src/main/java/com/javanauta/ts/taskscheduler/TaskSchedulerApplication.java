@@ -1,4 +1,4 @@
-package com.javanauta.taskscheduler;
+package com.javanauta.ts.taskscheduler;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

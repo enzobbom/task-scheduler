@@ -1,16 +1,14 @@
-package com.javanauta.taskscheduler.business;
+package com.javanauta.ts.taskscheduler.business;
 
-import com.javanauta.taskscheduler.business.dto.TaskDTO;
-import com.javanauta.taskscheduler.business.mapper.TaskConverter;
-import com.javanauta.taskscheduler.business.mapper.TaskUpdateConverter;
-import com.javanauta.taskscheduler.infrastructure.entity.Task;
-import com.javanauta.taskscheduler.infrastructure.enums.NotificationStatusEnum;
-import com.javanauta.taskscheduler.infrastructure.exception.ResourceNotFoundException;
-import com.javanauta.taskscheduler.infrastructure.repository.TaskRepository;
-import com.javanauta.taskscheduler.infrastructure.security.JwtUtil;
+import com.javanauta.ts.taskscheduler.business.dto.TaskDTO;
+import com.javanauta.ts.taskscheduler.business.mapper.TaskConverter;
+import com.javanauta.ts.taskscheduler.business.mapper.TaskUpdateConverter;
+import com.javanauta.ts.taskscheduler.infrastructure.entity.Task;
+import com.javanauta.ts.taskscheduler.infrastructure.enums.NotificationStatusEnum;
+import com.javanauta.ts.taskscheduler.infrastructure.exception.ResourceNotFoundException;
+import com.javanauta.ts.taskscheduler.infrastructure.repository.TaskRepository;
+import com.javanauta.ts.taskscheduler.infrastructure.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
-import org.osgi.resource.Resource;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
