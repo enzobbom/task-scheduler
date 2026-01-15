@@ -1,7 +1,7 @@
-package com.javanauta.taskscheduler.infrastructure.security;
+package com.javanauta.ts.taskscheduler.infrastructure.security;
 
-import com.javanauta.taskscheduler.business.dto.UserDTO;
-import com.javanauta.taskscheduler.infrastructure.client.UserClient;
+import com.javanauta.ts.taskscheduler.business.dto.UserDTO;
+import com.javanauta.ts.taskscheduler.infrastructure.client.UserClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;

@@ -1,12 +1,9 @@
-package com.javanauta.taskscheduler.controller;
+package com.javanauta.ts.taskscheduler.controller;
 
-import com.javanauta.taskscheduler.business.TaskService;
-import com.javanauta.taskscheduler.business.dto.TaskDTO;
-import com.javanauta.taskscheduler.infrastructure.enums.NotificationStatusEnum;
-import feign.Param;
+import com.javanauta.ts.taskscheduler.business.TaskService;
+import com.javanauta.ts.taskscheduler.business.dto.TaskDTO;
+import com.javanauta.ts.taskscheduler.infrastructure.enums.NotificationStatusEnum;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Response;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

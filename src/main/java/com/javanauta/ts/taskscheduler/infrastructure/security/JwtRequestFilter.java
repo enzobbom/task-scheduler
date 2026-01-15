@@ -1,4 +1,4 @@
-package com.javanauta.taskscheduler.infrastructure.security;
+package com.javanauta.ts.taskscheduler.infrastructure.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
